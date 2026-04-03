@@ -102,12 +102,15 @@ def main():
 
     cap = None
     for index in range(3):
-        c = cv2.VideoCapture(index)
-        if c.isOpened():
-            cap = c
-            print(f"Webcam found at index {index}")
+        for backend in [cv2.CAP_DSHOW, cv2.CAP_MSMF, cv2.CAP_ANY]:
+            c = cv2.VideoCapture(index, backend)
+            if c.isOpened():
+                cap = c
+                print(f"Webcam found at index {index}")
+                break
+            c.release()
+        if cap is not None:
             break
-        c.release()
     if cap is None:
         print("ERROR: No webcam found. Make sure it's connected and not in use.")
         return
