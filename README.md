@@ -1,4 +1,4 @@
-# Face Detecter 🐹
+# Face Detecter 
 
 A fun real-time face expression detector that mirrors your emotions with hamster memes.
 
