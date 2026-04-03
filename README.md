@@ -40,6 +40,10 @@ python main.py
 
 Press **Q** to quit.
 
+## Troubleshooting
+
+- **Cannot open webcam** — make sure your webcam is connected and not being used by another app. The app tries indexes 0, 1, 2 automatically.
+
 ## ⚠️ Work in Progress
 
 This project is still being improved! Known issues:

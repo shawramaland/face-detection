@@ -100,9 +100,16 @@ def main():
 
     images = load_images()
 
-    cap = cv2.VideoCapture(0)
-    if not cap.isOpened():
-        print("ERROR: Cannot open webcam.")
+    cap = None
+    for index in range(3):
+        c = cv2.VideoCapture(index)
+        if c.isOpened():
+            cap = c
+            print(f"Webcam found at index {index}")
+            break
+        c.release()
+    if cap is None:
+        print("ERROR: No webcam found. Make sure it's connected and not in use.")
         return
 
     current_emotion = "none"
