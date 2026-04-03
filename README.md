@@ -45,7 +45,7 @@ Press **Q** to quit.
 This project is still being improved! Known issues:
 - Emotion detection can be inconsistent with extreme expressions
 - Eye-closed detection sometimes triggers during squinting
-- Face detection may briefly lose your face during big expressions
+- Face detection may briefly lose your face during big expressions, howerver still you can play with it if you want!
 
 Feel free to clone it, play with it, and improve it yourself!
 
